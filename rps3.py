@@ -33,6 +33,8 @@ while playagain:
     print("")
 
     #we use a control statement to implement the logic of the game
+    #this control statement is the if/elif/else statement
+
 
     if player == 1 and computer == 3:
         print("🎉player wins")
