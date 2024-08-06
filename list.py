@@ -89,40 +89,40 @@ print(user)
 
 # # print(nuns) 
 # # print(nunscopy) 
-# # print(mynuns) 
-# # print(mycopy) 
+print(mynuns) 
+print(mycopy) 
 
-# # print("")
-# # #we can create a list with a constructor LIST
-# # mylist = list(["man", 1, "dan"])
-# # print(mylist)
+print("")
+#we can create a list with a constructor LIST
+mylist = list(["man", 1, "dan"])
+print(mylist)
 
 
 # ##TUPLES
 # #the order of the values in the tuples do not change for tuples
-# #the syntax of the tuples goes with a parantheses(_)
+#the syntax of the tuples goes with a parantheses(_)
 
 
-# mytuple = tuple(('dave', 'man', 34)) ##tuple created with a constructor tuple
-# print(type(mytuple))
+mytuple = tuple(('dave', 'man', 34)) ##tuple created with a constructor tuple
+print(type(mytuple))
 
-# print("")
-# anothertuple = (1,2,3,4)
-# print(anothertuple)
-# # (one, *two, hey) = anothertuple
-# # print(one)
-# # print(hey)
-# # print(two)
+print("")
+anothertuple = (1,2,3,4)
+print(anothertuple)
+(one, *two, hey) = anothertuple
+print(one)
+print(hey)
+print(two)
 
-# print("")
-# print(anothertuple.count(1)) 
+print("")
+print(anothertuple.count(1)) 
 
-# print("")
-# newlist = list(mytuple)
-# newlist.append("neil")
-# newtuple = tuple(newlist)
-# print(newtuple)
-# print(type(newlist))
+print("")
+newlist = list(mytuple)
+newlist.append("neil")
+newtuple = tuple(newlist)
+print(newtuple)
+print(type(newlist))
 
 # print(type(newlist.append("guy"))) ##his is a none type because tuples cannot change in their value
 
