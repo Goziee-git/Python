@@ -41,10 +41,10 @@
 # # # print(user)
 
 #using the insert method
-print("")
-user.insert(0,"Bob") #to put in a value in a particular index
-user[2:2] = ["Eddie", "Alex"]
-print(user)
+#print("")
+#user.insert(0,"Bob") #to put in a value in a particular index
+#user[2:2] = ["Eddie", "Alex"]
+#print(user)
 
 # # # print("")
 # # # user[2:3] = ["robert", "JP"]
@@ -89,13 +89,13 @@ print(user)
 
 # # print(nuns) 
 # # print(nunscopy) 
-print(mynuns) 
-print(mycopy) 
+#print(mynuns) 
+#print(mycopy) 
 
-print("")
+#print("")
 #we can create a list with a constructor LIST
-mylist = list(["man", 1, "dan"])
-print(mylist)
+#mylist = list(["man", 1, "dan"])
+#print(mylist)
 
 
 # ##TUPLES
@@ -132,7 +132,9 @@ print(type(newlist))
 # within a single 
 
 squares = []
+i = 1
 for i in range(10):
+    i += 1
     squared = i*i
     squares.append(squared)
     print(squares)
@@ -150,8 +152,9 @@ print(squares)
 print("*************")
 def squares():
     numbers = [[2,3,4], [5,6,7], [8,9,0]]
-    squared = [[num ** 2 for num in inside_list]for inside_list in numbers]
-    print(squared)
+    inside_list = [[1,2,3], [4,5,6]]
+    squared = [[num ** 2 for num in inside_list] for inside_list in numbers]
+    print(f"this is a list: {squared}")
 
 squares()
 print("   *********   ")
@@ -175,7 +178,7 @@ print("***********")
 ##another example of list comprehension with a matrix(a list of list)
 matrix = [[1,2,3], [4,5,6], [7,8,9]]
 transposed = [[row[i] for row in matrix] for i in range(len(matrix[0]))]
-print(transposed)
+print(f"this is transposed: {transposed}")
 
 # this is a form of list comprehension with multiple variable: this allows us to create a new tuple which is combination of several list
 numbers = [1,2,3]
@@ -189,10 +192,11 @@ cubes = [(num ** 3) for num in numbers]
 combined = [(num, square, cube) for num in numbers for square in squares for cube in cubes]
 #print(combined)
 print(">>>>>>>>>")
-print(combined[0],combined[13],combined[26])
+
 
 #using the zip function to combine list items
 students = [['john',18,'math'],['mary',12,'english'],['fred',17,'civic']]
+print(f"this is student: {students}")
 name = [student[0] for student in students]
 print(name)
 age = [student[1] for student in students]
@@ -206,15 +210,16 @@ print(combined)
 
 #to create a list of names or  values from a dictionary
 #to get a list from a dictionary
+print("<><<<><><><><><")
 my_dict = {"score1": 1,
         "score2": 2,
         "score3": 3
         }
-newlist = list(my_dict.keys()) #to get a list of the keys
-print(newlist)
-newlist2 = list(my_dict.values()) #to get a list of values
-print(newlist2)
-newlist3 = list(my_dict.items()) #a list of of both keys and values as a tuple
-print(newlist3)
-newlist4 = list(newlist3) + (newlist2)
-print(newlist4)
+list_of_key = list(my_dict.keys()) #to get a list of the keys
+print(list_of_key)
+list_of_value = list(my_dict.values()) #to get a list of values
+print(list_of_value)
+list_of_kv_tuple = list(my_dict.items()) #a list of of both keys and values as a tuple
+print(list_of_kv_tuple)
+concatenated_list = list(list_of_kv_tuple) + list(list_of_value) + list(list_of_key)
+print(concatenated_list)

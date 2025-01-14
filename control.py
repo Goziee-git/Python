@@ -10,13 +10,13 @@
 #    else:
 #        print("value is now equal to " + str(value))
 
-names = {"first":"dave", "second":"prospa", "third":"john"}
+#names = {"first":"dave", "second":"prospa", "third":"john"}
 #using the enumerate function to ouput the index and keys
-for index, key in enumerate(names):
-    print(index, key)
+#for index, key in enumerate(names):
+#    print(index, key)
 #using the items() method with the enumerate function to ouput the index,key,value
-for index, (key, value), in enumerate(names.items()):
-    print(index, key, value)
+#for index, (key, value), in enumerate(names.items()):
+#    print(index, key, value)
 
 
     
@@ -246,30 +246,7 @@ for index, (key, value), in enumerate(names.items()):
 #    print("The value you typed is incorrect!")
 
 
-
-
-
-
-
-
-
-
-
-
-
-            
-
-
-
-             
-   
-       
-
-
-
-
-
-
+..................................
 
 # def calculate_average():
 #     total = 0
@@ -304,3 +281,17 @@ for index, (key, value), in enumerate(names.items()):
 #        except:
 #            print("an error occurerd")
 #        break
+
+#USING THE MATCH-CASE STATEMENT
+data_type = input("any input:" )
+
+match data_type:
+    case str() | int() | float():
+        if case == str():
+            print ("you enter a string:")
+        elif case == int():
+            print("you entered an integer:")
+        elif case == float():
+            print("you entered a float value")
+    case _:
+        print("you entered something else")
