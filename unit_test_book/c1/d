@@ -1,0 +1,36 @@
+Help on module test_module01:
+
+NNAAMMEE
+    test_module01
+
+DDEESSCCRRIIPPTTIIOONN
+    This is tesr_module01
+    This is example of  multiline docstring
+
+CCLLAASSSSEESS
+    builtins.object
+        TestClass01
+
+    class TTeessttCCllaassss0011(builtins.object)
+     |  This is TestClass01.
+     |
+     |  Methods defined here:
+     |
+     |  tteesstt__ccaassee0011(self)
+     |      This is test_case01().
+     |
+     |  tteesstt__ffuunnccttiioonn0011()
+     |      This is test_function01().
+     |
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |
+     |  ____ddiicctt____
+     |      dictionary for instance variables
+     |
+     |  ____wweeaakkrreeff____
+     |      list of weak references to the object
+
+FFIILLEE
+    /mnt/c/Users/USER-PC/python/pylessons/python-repo/unit_test_book/c1/test_module01.py
+

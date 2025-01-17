@@ -1,0 +1,8 @@
+"""
+this is a testing file for or code
+"""
+>>> from test_module02 import *
+>>> employee("prosper", 20)
+prosper 20
+>>> sub(20,10)
+10
