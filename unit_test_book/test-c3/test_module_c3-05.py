@@ -1,37 +1,43 @@
 import unittest
 
 def setUpModule():
-   """Called once, before antthing else in this module"""
-   print("In setUpModule()...")
+   """Module level Fixtures"""
+   print("done first, before test runs")
 
 def tearDownModule():
-   """Called once, after everything else in this module"""
+   """Module level fixture for tearing down. called once after all in the module"""
 
-class TestClass06(unittest.TestCase):
+class Testclass(unittest.TestCase):
    @classmethod
    def setUpClass(cls):
-      """Called once, before any test"""
-      print("In setUpClass()...")
+      """Class-Level Test Fixtures
+      called once before any test"""
 
    @classmethod
    def tearDownClass(cls):
-      """called once, after all tests, if setUpClass Successful"""
-      print("In tearDownClass()...")
+      """Class-Level tear down test fixtures"""
+
 
    def setUp(self):
-      """Called multiple times, before every test method"""
-      print("\nIn setUp()...")
+      """Method-Level setup fixtures"""
+
+
    def tearDown(self):
-      """Called multiple times after evert test method"""
-      print("in tearDown()...")
+      """Method-Level tear down fixtures"""
+
 
    def test_case01(self):
       self.assertTrue("PYTHON".isupper())
-      print("In test_case01()")
+      print("in test_case01()")
+
 
    def test_case02(self):
-      self.assertFalse("python".isupper())
-      print("In test_case02()")
+      self.assertFalse("PYTHON".islower())
+      print("in test_case02()")      
+
 
 if __name__ == "__main__":
    unittest.main()
+ 
+
+
