@@ -52,32 +52,31 @@ print(r.area())  # Output: 104
 ##a random example of class
 print("  ........... ")
 
-books = []
-
 class Books:
+
+   books = []
+   
    def __init__(self, title, author):
       self.title = title 
       self.author = author 
 
    def add_book(self):
       """using the if conditional statement to check if books exist"""
-      if self not in books:
-         books.append(self)
-      return self.title + " " + self.author
+      if self not in Books.books:
+         Books.books.append(self)
+      return f"{self.title} by {self.author} has been added"
 
    def delete_book(self):
-      if self in books:
-         books.remove(self)
-      return f"{self.title} by {self.author} has been removed."
+      if self in Books.books:
+         Books.books.remove(self)
 
-# Removed reassignment of methods
-
-
-
-Novels = Books("A Land of Power", "Johnas Audrey")
-print(Novels.add_book())
-print(books)
-Academic_articles = Books("Programming Paradigms", "sanjay greg")
-print(Academic_articles.add_book())
-print(books)
-print(Novels.delete_book())
+   def display_books(self):
+      return [f"{book.title} by {book.author}" for book in books]
+      return [f"{book.title} by {book.author}" for book in Books.books]
+      
+book1 = Books("The Alchemist", "Paulo Coelho")
+print(book1.add_book())
+book2 = Books("The 48 Laws of Power", "Robert Greene")
+print(book2.add_book())
+book3 = Books("The 50th Law", "Robert Greene")
+print(book3.add_book())
