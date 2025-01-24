@@ -51,3 +51,18 @@ syntaxes
 |product = products.Product()
 >>"""
 these statements use the .dot operator to seperate packages or modules
+"""
+#RELATIVE IMPORTS
+"""Relative imports are basically a way of saying find a class, function, or module as it is positioned realtive to the current module
+eg. when Working in the product module and we want to import the Database class from the database module next to it, we could use the relative import
+| from .database import Database
+in (.database) the period(.) in front of the database says use the database module inside the current package. 
+>>if we were editing the paypal  module inside the ecommercee.payment package, we woud want, for example to use the database package inside the parent package instead. This is easily done
+with two periods
+| from ..database import Database
+>>we use more peroids to go further up the heirachy. say for example, if we had an ecoommerce.contact package containing an email module and wanted to import the send_mail function into our paypal module
+|from ..contact.email import send_mail
+>>importing code directly from packages
+for example, we have an ecommerce package containing 2 modules named database.py and product.py
+
+

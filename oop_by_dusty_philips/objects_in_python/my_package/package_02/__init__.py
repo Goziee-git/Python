@@ -1,0 +1,1 @@
+from .module02_1 import MyClass
