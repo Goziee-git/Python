@@ -1,0 +1,74 @@
+### Steps to Set Up MySQL and Connect Using Python:
+
+1. **Install MySQL:**
+   - For **Ubuntu**:
+     ```bash
+     sudo apt update
+     sudo apt install mysql-server
+     ```
+   - For **Windows**:
+     - Download the installer from the [MySQL official website](https://dev.mysql.com/downloads/mysql/).
+     - Follow the installation instructions.
+
+2. **Start MySQL Server:**
+   - For **Ubuntu**:
+     ```bash
+     sudo service mysql start
+     ```
+   - For **Windows**:
+     - Start the MySQL service from the Services management console or use the command prompt:
+     ```bash
+     net start mysql
+     ```
+
+3. **Create a Database:**
+   - Use the MySQL command line or a GUI tool like MySQL Workbench to create a new database. For example:
+     ```sql
+     CREATE DATABASE mydatabase;
+     ```
+
+4. **Create a User and Grant Permissions:**
+   - Create a new user and grant them permissions to the database:
+     ```sql
+     CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
+     GRANT ALL PRIVILEGES ON mydatabase.* TO 'myuser'@'localhost';
+     FLUSH PRIVILEGES;
+     ```
+
+5. **Install mysql-connector-python:**
+   - Ensure that the `mysql-connector-python` package is installed in your virtual environment:
+     ```bash
+     pip install mysql-connector-python
+     ```
+
+6. **Connect to MySQL Using Python:**
+   - Use the following example code in your Python script to connect to the MySQL database:
+   ```python
+   import mysql.connector as mysql
+
+   # Establish a connection to the database
+   connection = mysql.connect(
+       host='localhost',
+       user='myuser',
+       password='mypassword',
+       database='mydatabase'
+   )
+
+   # Check if the connection was successful
+   if connection.is_connected():
+       print("Successfully connected to the database")
+       connection.close()
+   else:
+       print("Connection failed")
+   ```
+
+### Follow-Up Steps:
+- Follow the above steps to set up MySQL and connect to it using the provided Python code.
+"""
+one liner to enter database as root and create database named prospa
+>> mysql -u root -p -e "CREATE DATABASE prospa; USE prospa; SOURCE database.sql;"
+this command will create a database named prospa using the command CREATE DATABASAE prospa
+with the schema written in SOURCE database.sql, it uses the database user( -u) as root with a password enter when prompted
+because of the -p flag
+
+"""
