@@ -14,6 +14,10 @@
    - For **Ubuntu**:
      ```bash
      sudo service mysql start
+   - using systemctl
+     sudo systemctl start mysql.service #without using sudo the service mysql will not start.
+   - check status of the service use:
+     sudo systemctl status mysql.service
      ```
    - For **Windows**:
      - Start the MySQL service from the Services management console or use the command prompt:
@@ -37,7 +41,12 @@
 
 5. **Install mysql-connector-python:**
    - Ensure that the `mysql-connector-python` package is installed in your virtual environment:
-     ```bash
+      to create a virtual env in linux use the command
+   >> python -m venv <venv-name>
+      activate the venv using the command
+   >> source venv-name/bin/activate
+   - IN PYTHON WE HAVE TO USE THE PYTHON CONNECTOR MODULE TO CONNECT TO MYSQL AND ALSO MAKE USE OF THE CURSOR() OBJECT TO ACCESS THE DB.
+   ```bash
      pip install mysql-connector-python
      ```
 
@@ -70,5 +79,4 @@ one liner to enter database as root and create database named prospa
 this command will create a database named prospa using the command CREATE DATABASAE prospa
 with the schema written in SOURCE database.sql, it uses the database user( -u) as root with a password enter when prompted
 because of the -p flag
-
 """
