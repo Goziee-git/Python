@@ -69,7 +69,8 @@ we can have multiple db connections also
 cursor1 = cursor()
 cursor2 = cursor()
 
-| these objects cursor1 and cursor1 functions like other variables and object, by calling their methods and atributes separately. we can interact with either of the db and even copy from one to another
+| these objects cursor1 and cursor1 functions like other variables and object, by calling their methods and atributes separately. 
+  we can interact with either of the db and even copy from one to another
 |
 |
 |
