@@ -2,7 +2,7 @@ class MyFirstClass:
    def reset(self):
       self.x = 0
       self.y = 0
-"""to create an object by instantiate the class and assign it to the object created"""      
+"""to create an object we instantiate the class and assign it to the object created"""      
 p = MyFirstClass()
 """called the method one the object 'p' of the class"""
 p.reset()
